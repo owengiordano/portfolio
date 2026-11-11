@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>UGC Creator Portfolio</title>
+  <meta name="description" content="UGC creator portfolio — authentic short-form video content for brands.">
+  <meta name="theme-color" content="#0A0A0A">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='44' fill='%23FF4F2B'/></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="content.js" defer></script>
+  <script src="main.js" defer></script>
+</head>
+<body class="is-loading">
+
+  <!-- Preloader -->
+  <div class="preloader" id="preloader" aria-hidden="true">
+    <div class="preloader__inner">
+      <span class="preloader__name" id="preloaderName"></span>
+      <span class="preloader__count"><span id="preloaderCount">0</span></span>
+    </div>
+  </div>
+
+  <div class="cursor" id="cursor" aria-hidden="true"><span class="cursor__label" id="cursorLabel"></span></div>
+  <div class="progress" id="progress" aria-hidden="true"></div>
+
+  <!-- Nav -->
+  <header class="nav" id="nav">
+    <a href="#top" class="nav__logo" id="navLogo"></a>
+    <nav class="nav__links" aria-label="Main">
+      <a href="#work">Work</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#rates" id="navRates">Rates</a>
+    </nav>
+    <a href="#contact" class="btn btn--small magnetic"><span>Let's work together</span><span class="arrow">→</span></a>
+  </header>
+
+  <main id="top">
+
+    <!-- Hero -->
+    <section class="hero">
+      <div class="wrap hero__grid">
+        <div class="hero__text">
+          <div class="badge hero__badge"><span class="dot"></span><span id="heroBadge"></span></div>
+          <h1 class="hero__title" id="heroTitle"></h1>
+          <div class="hero__stats" id="heroStats"></div>
+          <div class="hero__ctas">
+            <a href="#work" class="btn magnetic"><span>View my work</span><span class="arrow">→</span></a>
+            <a href="#contact" class="btn btn--ghost magnetic"><span>Get in touch</span></a>
+          </div>
+        </div>
+        <div class="hero__photo-wrap" data-depth="1">
+          <div class="hero__photo" id="heroPhoto"></div>
+          <svg class="spin-badge" viewBox="0 0 200 200" aria-hidden="true">
+            <defs><path id="circlePath" d="M100,100 m-78,0 a78,78 0 1,1 156,0 a78,78 0 1,1 -156,0"/></defs>
+            <text><textPath href="#circlePath" id="spinText"></textPath></text>
+          </svg>
+        </div>
+      </div>
+      <div class="wrap hero__meta">
+        <span id="heroLocation"></span>
+        <span class="hero__scroll"><span class="hero__scroll-line"></span>Scroll</span>
+        <span id="heroRole"></span>
+      </div>
+    </section>
+
+    <!-- Brands marquee -->
+    <section class="marquee" aria-label="Brands I've worked with">
+      <div class="marquee__label">Trusted by brands like</div>
+      <div class="marquee__track" id="marqueeTrack"></div>
+    </section>
+
+    <!-- About -->
+    <section class="section about" id="about">
+      <div class="wrap">
+        <span class="eyebrow">About me</span>
+        <p class="about__statement" id="aboutStatement"></p>
+        <div class="about__grid" id="aboutGrid">
+          <div class="about__photo-wrap" id="aboutPhotoWrap" data-reveal>
+            <div class="about__photo" id="aboutPhoto"></div>
+          </div>
+          <div class="about__body">
+            <div id="aboutParagraphs"></div>
+            <div class="niches" id="niches"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Work -->
+    <section class="section work" id="work">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow eyebrow--light">Portfolio</span>
+            <h2 class="h2" data-split>Selected <em>work</em></h2>
+          </div>
+          <div class="filters" id="filters" role="tablist" aria-label="Filter work"><span class="filters__pill" id="filtersPill"></span></div>
+        </div>
+        <div class="work__grid" id="workGrid"></div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section class="section services" id="services">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">Services</span>
+            <h2 class="h2" data-split>What I <em>create</em></h2>
+          </div>
+          <p class="section-head__aside" data-reveal>Everything you need to fill your content pipeline with creative that performs.</p>
+        </div>
+        <div class="services__list" id="servicesList"></div>
+      </div>
+    </section>
+
+    <!-- Process -->
+    <section class="section process">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">Process</span>
+            <h2 class="h2" data-split>Simple, fast, <em>stress-free</em></h2>
+          </div>
+        </div>
+        <div class="process__track">
+          <div class="process__line" data-reveal></div>
+          <div class="process__grid" id="processGrid"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section testimonials" id="testimonials">
+      <div class="wrap">
+        <span class="eyebrow">Kind words</span>
+        <div class="stories" id="storyBars"></div>
+        <div class="quotes" id="quotes"></div>
+      </div>
+    </section>
+
+    <!-- Rates -->
+    <section class="section rates" id="rates">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">Rates</span>
+            <h2 class="h2" data-split>Packages &amp; <em>pricing</em></h2>
+          </div>
+          <p class="section-head__aside" id="ratesNote" data-reveal></p>
+        </div>
+        <div class="packages" id="packages"></div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact" id="contact">
+      <div class="wrap">
+        <span class="eyebrow eyebrow--light">Contact</span>
+        <h2 class="contact__title" id="contactTitle" data-split></h2>
+        <p class="contact__sub" id="contactSub" data-reveal></p>
+        <div class="contact__actions" data-reveal>
+          <button class="email-btn magnetic" id="copyEmail" data-cursor="Copy">
+            <span class="email-btn__text" id="emailText"></span>
+            <span class="email-btn__hint" id="emailHint">Click to copy</span>
+          </button>
+          <a class="btn btn--light magnetic" id="mailLink" href="#"><span>Send an email</span><span class="arrow">→</span></a>
+        </div>
+        <div class="contact__meta">
+          <ul class="socials" id="socials"></ul>
+          <div class="localtime" id="localTime"></div>
+        </div>
+      </div>
+      <footer class="footer">
+        <div class="footer__name" id="footerName" aria-hidden="true"></div>
+        <div class="wrap footer__bar">
+          <span id="footerCopy"></span>
+          <a href="#top" class="footer__top">Back to top ↑</a>
+        </div>
+      </footer>
+    </section>
+  </main>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Video player" aria-hidden="true">
+    <button class="lightbox__close" id="lightboxClose">Close <span>✕</span></button>
+    <div class="lightbox__stage">
+      <video id="lightboxVideo" controls playsinline></video>
+    </div>
+    <div class="lightbox__info">
+      <span class="lightbox__brand" id="lightboxBrand"></span>
+      <span class="lightbox__title" id="lightboxTitle"></span>
+    </div>
+  </div>
+
+  <noscript><p style="padding:2rem;text-align:center">Please enable JavaScript to view this portfolio.</p></noscript>
+</body>
+</html>
